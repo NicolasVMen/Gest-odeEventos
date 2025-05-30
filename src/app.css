@@ -1,0 +1,66 @@
+.app {
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  main {
+    flex: 1;
+    padding-top: 20px; /* Espaço para o header fixo */
+  }
+  
+  /* Media Queries para Responsividade */
+  @media (max-width: 768px) {
+    main {
+      padding-top: 60px; /* Reduz o padding para telas menores */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    main {
+      padding-top: 50px;
+    }
+  }
+
+  /* Estilos para telas maiores */
+@media (min-width: 1200px) {
+  .app {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .event-list .events {
+    justify-content: space-between;
+  }
+
+  .event-card {
+    width: 45%;
+  }
+}
+
+/* Estilos para tablets e telas médias */
+@media (max-width: 768px) {
+  .event-card {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+}
+
+/* Estilos para telas pequenas (celulares) */
+@media (max-width: 480px) {
+  .event-card {
+    padding: 10px;
+  }
+
+  .event-details h3 {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,161 @@
+/* src/components/EventDetails.css */
+.event-details {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .event-details h2 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  
+  .event-details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .event-image img {
+    max-width: 100%;
+    max-height: 300px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+  }
+  
+  .event-info {
+    text-align: left;
+  }
+  
+  .event-info p {
+    font-size: 1.1rem;
+    color: #555;
+    margin: 10px 0;
+  }
+  
+  .participants-list,
+  .comments-list,
+  .ratings-list {
+    margin-top: 20px;
+  }
+  
+  .participants-list h4,
+  .comments-list h4,
+  .ratings-list h4 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .participants-list ul,
+  .comments-list ul,
+  .ratings-list ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .participants-list li,
+  .comments-list li,
+  .ratings-list li {
+    background-color: #f8f9fa;
+    padding: 10px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .admin-actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .edit-btn,
+  .delete-btn,
+  .back-btn {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-btn {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .edit-btn:hover {
+    background-color: #0056b3;
+  }
+  
+  .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .delete-btn:hover {
+    background-color: #c82333;
+  }
+  
+  .back-btn {
+    background-color: #6c757d;
+    color: white;
+  }
+  
+  .back-btn:hover {
+    background-color: #5a6268;
+  }
+  
+  .error-message {
+    color: #dc3545;
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .event-details {
+      margin: 20px;
+      padding: 20px;
+    }
+  
+    .event-details h2 {
+      font-size: 1.5rem;
+    }
+  
+    .event-info p {
+      font-size: 1rem;
+    }
+  
+    .event-image img {
+      max-height: 200px;
+    }
+  
+    .participants-list li,
+    .comments-list li,
+    .ratings-list li {
+      font-size: 0.9rem;
+      padding: 8px;
+    }
+  
+    .edit-btn,
+    .delete-btn,
+    .back-btn {
+      padding: 10px 20px;
+      font-size: 0.9rem;
+    }
+  
+    .admin-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }

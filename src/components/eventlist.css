@@ -1,0 +1,434 @@
+/* src/components/EventList.css */
+.event-list {
+  padding: 30px;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  min-height: 100vh;
+}
+
+.event-list h2 {
+  text-align: center;
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 40px;
+  padding-bottom: 15px;
+  border-bottom: 3px solid #007bff;
+  display: inline-block;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+.events-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.event-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  width: 48%;
+  min-width: 500px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 2px solid #007bff;
+}
+
+.banner-container {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+}
+
+.event-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.5s;
+}
+
+.event-card:hover .event-banner {
+  transform: scale(1.03);
+}
+
+/* Estilizar as informações sobre o banner */
+.banner-info {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.event-category,
+.event-type,
+.event-price {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.event-content {
+  padding: 15px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.event-info {
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.event-info h3 {
+  color: #007bff;
+  margin-bottom: 15px;
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.event-meta p {
+  color: #555;
+  margin: 8px 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Estilo base para os botões */
+.event-info button {
+  width: 100%;
+  padding: 10px;
+  margin: 15px 0;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+/* Estilo para o botão "Inscrever-se" (verde) */
+.register-btn {
+  background: #28a745;
+  color: white;
+}
+
+.register-btn:hover {
+  background: #218838;
+  transform: translateY(-2px);
+}
+
+/* Estilo para o botão "Cancelar Inscrição" (vermelho) */
+.cancel-btn {
+  background: #dc3545;
+  color: white;
+  margin-top: 10px; /* Espaçamento abaixo do botão "Inscrever-se" */
+}
+
+.cancel-btn:hover {
+  background: #c82333;
+  transform: translateY(-2px);
+}
+
+.event-info button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Estilo para "Ver Detalhes" */
+.event-info .view-details {
+  background: #6c757d;
+}
+
+.event-info .view-details:hover {
+  background: #5a6268;
+}
+
+.rating-comments-container {
+  padding: 15px;
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.rating-section {
+  margin: 10px 0;
+  padding: 2px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-align: center;
+  width: 100%;
+}
+
+.stars-container {
+  margin-bottom: 10px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.star {
+  color: #ddd;
+  font-size: 20px;
+}
+
+.star.filled {
+  color: #ffc107;
+}
+
+.average-rating {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  margin-left: 8px;
+}
+
+.rating-count {
+  font-size: 14px;
+  color: #666;
+  display: block;
+}
+
+.user-rating {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.user-rating select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  min-width: 110px;
+}
+
+.user-rating button {
+  padding: 8px 15px;
+  background: #17a2b8;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.user-rating button:hover {
+  background: #138496;
+  transform: translateY(-2px);
+}
+
+.comments-section {
+  margin-top: 15px;
+  padding: 15px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.comments-section h4 {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+.comments-list {
+  margin-bottom: 15px;
+}
+
+.comment {
+  background: white;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.comment p {
+  margin: 0;
+  color: #555;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.comment .admin-rating {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.show-more {
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #007bff;
+  padding: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  margin: 10px 0;
+  transition: all 0.3s;
+}
+
+.show-more:hover {
+  background: rgba(0, 123, 255, 0.1);
+  border-radius: 4px;
+}
+
+.add-comment {
+  margin-top: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  resize: vertical;
+  min-height: 70px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.comment-button {
+  width: 100%;
+  padding: 10px;
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-sizing: border-box;
+}
+
+.comment-button:hover {
+  background: #5a6268;
+  transform: translateY(-2px);
+}
+
+.comment-button:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 1100px) {
+  .event-card {
+    width: 100%;
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .event-card {
+    flex-direction: column;
+    min-width: auto;
+  }
+  
+  .banner-container {
+    width: 100%;
+    height: 180px;
+  }
+  
+  .event-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .event-info {
+    width: 100%;
+  }
+  
+  .user-rating {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .user-rating select {
+    width: 100%;
+  }
+  
+  .user-rating button {
+    width: 100%;
+  }
+
+  .banner-info {
+    font-size: 12px;
+    gap: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .event-list {
+    padding: 15px;
+  }
+  
+  .event-list h2 {
+    font-size: 24px;
+  }
+  
+  .event-info h3 {
+    font-size: 18px;
+  }
+  
+  .event-meta p {
+    font-size: 14px;
+  }
+  
+  .stars {
+    gap: 2px;
+  }
+  
+  .star {
+    font-size: 18px;
+  }
+
+  .banner-info {
+    font-size: 10px;
+    gap: 5px;
+  }
+
+  .event-category,
+  .event-type,
+  .event-price {
+    padding: 3px 6px;
+  }
+}
